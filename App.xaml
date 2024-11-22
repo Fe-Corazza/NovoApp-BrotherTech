@@ -9,6 +9,21 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            
+            <!-- Tema Light -->
+            <Style x:Key="LightTheme" TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="#F2F9FF" />
+              <!-- <Setter Property="TextColor" Value="Black" /> -->
+            </Style>
+            
+            <!-- Tema Dark -->
+            <Style x:Key="DarkTheme" TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="#121212" />
+               <!-- <Setter Property="TextColor" Value="White" />  -->
+            </Style>
+            
         </ResourceDictionary>
+
+
     </Application.Resources>
 </Application>

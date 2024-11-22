@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.Controls;
+using NovoApp.Pages;
 
 namespace NovoApp
 {
@@ -43,6 +44,13 @@ namespace NovoApp
         {
             // Substitua por sua lógica de validação real, como uma API ou banco de dados
             return email == "teste@brotherstech.com" && password == "123456";
+        }
+
+        private async void OnCadastrarClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PaginaCadastro());
+
+
         }
     }
 }

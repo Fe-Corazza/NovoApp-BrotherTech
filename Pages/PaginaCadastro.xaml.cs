@@ -1,10 +1,11 @@
 namespace NovoApp.Pages;
 
-public partial class NovaPagina : ContentPage
+public partial class PaginaCadastro : ContentPage
 {
-	public NovaPagina()
+	public PaginaCadastro()
 	{
 		InitializeComponent();
+
 
         // Aplica tema dinâmico
         var currentTheme = Application.Current.UserAppTheme;

@@ -8,15 +8,6 @@
             VerticalOptions="CenterAndExpand"
             HorizontalOptions="Center"
             Padding="18">
-
-            <VerticalStackLayout
-            VerticalOptions="Start"
-            HorizontalOptions="Center"
-            Padding="10">
-                <Image Source="logo.png"
-                   HeightRequest="120"
-                   HorizontalOptions="Center" />
-            </VerticalStackLayout>
             <!-- Contêiner com borda e sombras -->
             <Border
                 Margin="10"
@@ -40,18 +31,18 @@
                     <!-- Logo -->
                     <Image Source="logo.png"
                            HeightRequest="60"
-                           HorizontalOptions="Center" />
+                           HorizontalOptions="Start" />
 
                     <!-- Título -->
                     <Label Text="Bem-Vindo à Brothers Tech"
-                           FontSize="22"
+                           FontSize="18"
                            HorizontalOptions="Center"
                            TextColor="{DynamicResource PrimaryTextColor}"
                            FontAttributes="Bold" />
 
                     <!-- Subtítulo -->
                     <Label Text="LOGIN"
-                           FontSize="18"
+                           FontSize="15"
                            HorizontalOptions="Start"
                            TextColor="{DynamicResource SecondaryTextColor}"
                            FontAttributes="Bold" />
@@ -89,11 +80,10 @@
                         <CheckBox x:Name="TermsCheckBox"
                                   Color="{DynamicResource AccentColor}" />
                         <Label Text="Concordo com os Termos de Serviço e \ncom a Política de Privacidade da Brothers Tech"
-                               FontSize="12"
+                               FontSize="5"
                                TextColor="{DynamicResource SecondaryTextColor}" />
                     </HorizontalStackLayout>
 
-                    <!-- Botão de login -->
                     <Button Text="Entrar"
                             BackgroundColor="Red"
                             TextColor="White"
@@ -102,6 +92,17 @@
                             HeightRequest="50"
                             Clicked="OnLoginClicked" 
                             />
+                    <Label Text="Ainda não tem uma conta ?"
+                           FontSize="5"
+                           TextColor="{DynamicResource SecondaryTextColor}" />
+
+                    <Button Text="Cadastre-se Aqui!"
+                            TextColor="White"
+                            FontSize="6"
+                            Clicked="OnCadastrarClicked" 
+                            />
+
+
                 </VerticalStackLayout>
             </Border>
         </VerticalStackLayout>
