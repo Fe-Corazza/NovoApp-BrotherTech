@@ -1,0 +1,109 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovoApp.MainPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="Center"
+            Padding="18">
+
+            <VerticalStackLayout
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            Padding="10">
+                <Image Source="logo.png"
+                   HeightRequest="120"
+                   HorizontalOptions="Center" />
+            </VerticalStackLayout>
+            <!-- Contêiner com borda e sombras -->
+            <Border
+                Margin="10"
+                Padding="20"
+                Stroke="{DynamicResource BorderColor}"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 20">
+                <Border.Shadow>
+                    <Shadow
+                        Brush="{DynamicResource ShadowColor}"
+                        Opacity="0.5"
+                        Radius="10"
+                        Offset="5,5" />
+                </Border.Shadow>
+
+
+                <VerticalStackLayout
+                    Padding="10"
+                    Spacing="15">
+
+                    <!-- Logo -->
+                    <Image Source="logo.png"
+                           HeightRequest="60"
+                           HorizontalOptions="Center" />
+
+                    <!-- Título -->
+                    <Label Text="Bem-Vindo à Brothers Tech"
+                           FontSize="22"
+                           HorizontalOptions="Center"
+                           TextColor="{DynamicResource PrimaryTextColor}"
+                           FontAttributes="Bold" />
+
+                    <!-- Subtítulo -->
+                    <Label Text="LOGIN"
+                           FontSize="18"
+                           HorizontalOptions="Start"
+                           TextColor="{DynamicResource SecondaryTextColor}"
+                           FontAttributes="Bold" />
+
+                    <!-- Entrada de e-mail -->
+                    <Entry x:Name="EmailEntry"
+                           Placeholder="E-mail/Telefone..."
+                           PlaceholderColor="{DynamicResource PlaceholderColor}"
+                           TextColor="{DynamicResource PrimaryTextColor}"
+                           BackgroundColor="{DynamicResource InputBackgroundColor}"
+                           FontSize="16"
+                           HeightRequest="45"
+                           HorizontalOptions="FillAndExpand" />
+
+                    <!-- Subtítulo -->
+                    <Label Text="Senha..."
+                           FontSize="18"
+                           HorizontalOptions="Start"
+                           TextColor="{DynamicResource SecondaryTextColor}"
+                           FontAttributes="Bold" />
+
+                    <!-- Entrada de senha -->
+                    <Entry x:Name="PasswordEntry"
+                           Placeholder="Criar senha..."
+                           PlaceholderColor="{DynamicResource PlaceholderColor}"
+                           TextColor="{DynamicResource PrimaryTextColor}"
+                           BackgroundColor="{DynamicResource InputBackgroundColor}"
+                           FontSize="16"
+                           IsPassword="True"
+                           HeightRequest="45"
+                           HorizontalOptions="FillAndExpand" />
+
+                    <!-- Checkbox para termos -->
+                    <HorizontalStackLayout>
+                        <CheckBox x:Name="TermsCheckBox"
+                                  Color="{DynamicResource AccentColor}" />
+                        <Label Text="Concordo com os Termos de Serviço e \ncom a Política de Privacidade da Brothers Tech"
+                               FontSize="12"
+                               TextColor="{DynamicResource SecondaryTextColor}" />
+                    </HorizontalStackLayout>
+
+                    <!-- Botão de login -->
+                    <Button Text="Entrar"
+                            BackgroundColor="Red"
+                            TextColor="White"
+                            FontSize="16"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            Clicked="OnLoginClicked" 
+                            />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
