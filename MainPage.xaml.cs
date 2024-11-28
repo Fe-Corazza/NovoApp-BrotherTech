@@ -52,5 +52,10 @@ namespace NovoApp
 
 
         }
+
+        private async void OnSignUpTapped(object sender, TappedEventArgs e)
+        {
+            await Navigation.PushAsync(new PaginaCadastro());
+        }
     }
 }

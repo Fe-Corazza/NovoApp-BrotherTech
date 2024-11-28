@@ -92,17 +92,29 @@
                             HeightRequest="50"
                             Clicked="OnLoginClicked" 
                             />
-                    <Label Text="Ainda não tem uma conta ?"
-                           FontSize="5"
-                           TextColor="{DynamicResource SecondaryTextColor}" />
+                    <HorizontalStackLayout HorizontalOptions="Center">
+                        <Label Text="Ainda não tem uma conta ?"
+                            FontSize="8"
+                            TextColor="{DynamicResource SecondaryTextColor}" />
 
-                    <Button Text="Cadastre-se Aqui!"
-                            TextColor="White"
-                            FontSize="6"
-                            Clicked="OnCadastrarClicked" 
-                            />
-
-
+                        <Label FontSize="8">
+                            <Label.TextColor>
+                                <DynamicResource Key="AccentColor" />
+                            </Label.TextColor>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text=" " />
+                                    <Span Text="Cadastre-se"
+                  TextDecorations="Underline">
+                                        <Span.GestureRecognizers>
+                                            <!-- Adicione o evento de toque -->
+                                            <TapGestureRecognizer Tapped="OnSignUpTapped" />
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </HorizontalStackLayout>
                 </VerticalStackLayout>
             </Border>
         </VerticalStackLayout>
