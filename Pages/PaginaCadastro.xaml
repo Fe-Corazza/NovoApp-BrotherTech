@@ -1,38 +1,122 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NovoApp.Pages.PaginaCadastro"
              Title="PaginaCadastro">
-    <ContentPage.Resources>
-        <Style x:Key="InputStyle" TargetType="Entry">
-            <Setter Property="HeightRequest" Value="50" />
-            <Setter Property="Margin" Value="0,5,0,5" />
-            <Setter Property="BackgroundColor" Value="Transparent" />
-        </Style>
-    </ContentPage.Resources>
-    <VerticalStackLayout>
-        <ScrollView>
-            <VerticalStackLayout Padding="20">
-                <Image Source="logo.png" HorizontalOptions="Center" WidthRequest="100" HeightRequest="100" />
-
-                <Label Text="Bem-Vindo à Brothers Tech" FontSize="24" HorizontalOptions="Center" Margin="0,20,0,20" />
-
-                <!-- Entradas de Cadastro -->
-                <Entry Placeholder="E-mail/Telefone" Style="{StaticResource InputStyle}" />
-                <Entry Placeholder="Criar senha..." IsPassword="True" Style="{StaticResource InputStyle}" />
-                <Entry Placeholder="Confirmar senha..." IsPassword="True" Style="{StaticResource InputStyle}" />
-
-                <!-- Checkbox -->
-                <CheckBox x:Name="AgreeTerms" />
-                <Label Text="Concordo com os Termos de Serviço e com a Política de Privacidade da Brothers Tech" 
-                   FontSize="14" VerticalOptions="Center" />
-
-                <!-- Botão -->
-                <Button Text="Cadastrar-se" BackgroundColor="Red" TextColor="White" CornerRadius="25"
-                    HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" />
-            </VerticalStackLayout>
-        </ScrollView>
+    <ScrollView>
+        <VerticalStackLayout
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="Center"
+            Padding="18">
+            <!-- Contêiner com borda e sombras -->
+            <Border
+                Margin="10"
+                Padding="20"
+                Stroke="{DynamicResource BorderColor}"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 20">
+                <Border.Shadow>
+                    <Shadow
+                        Brush="{DynamicResource ShadowColor}"
+                        Opacity="0.5"
+                        Radius="10"
+                        Offset="5,5" />
+                </Border.Shadow>
 
 
-    </VerticalStackLayout>
+                <VerticalStackLayout
+                    Padding="10"
+                    Spacing="15">
+
+                    <!-- Logo -->
+                    <Image Source="logo.png"
+                           HeightRequest="60"
+                           HorizontalOptions="Start" />
+
+                    <!-- Título -->
+                    <Label Text="Bem-Vindo à Brothers Tech"
+                           FontSize="18"
+                           HorizontalOptions="Center"
+                           TextColor="{DynamicResource PrimaryTextColor}"
+                           FontAttributes="Bold" />
+
+                    <!-- Subtítulo -->
+                    <Label Text="LOGIN"
+                           FontSize="15"
+                           HorizontalOptions="Start"
+                           TextColor="{DynamicResource SecondaryTextColor}"
+                           FontAttributes="Bold" />
+
+                    <!-- Entrada de e-mail -->
+                    <Entry x:Name="EmailEntry"
+                           Placeholder="E-mail/Telefone..."
+                           PlaceholderColor="{DynamicResource PlaceholderColor}"
+                           TextColor="{DynamicResource PrimaryTextColor}"
+                           BackgroundColor="{DynamicResource InputBackgroundColor}"
+                           FontSize="16"
+                           HeightRequest="45"
+                           HorizontalOptions="FillAndExpand" />
+
+                    <!-- Subtítulo -->
+                    <Label Text="Senha..."
+                           FontSize="18"
+                           HorizontalOptions="Start"
+                           TextColor="{DynamicResource SecondaryTextColor}"
+                           FontAttributes="Bold" />
+
+                    <!-- Entrada de senha -->
+                    <Entry x:Name="PasswordEntry"
+                           Placeholder="Criar senha..."
+                           PlaceholderColor="{DynamicResource PlaceholderColor}"
+                           TextColor="{DynamicResource PrimaryTextColor}"
+                           BackgroundColor="{DynamicResource InputBackgroundColor}"
+                           FontSize="16"
+                           IsPassword="True"
+                           HeightRequest="45"
+                           HorizontalOptions="FillAndExpand" />
+
+                    <!-- Subtítulo -->
+                    <Label Text="Confirmar Senha..."
+                           FontSize="18"
+                           HorizontalOptions="Start"
+                           TextColor="{DynamicResource SecondaryTextColor}"
+                           FontAttributes="Bold" />
+                    <!-- Entrada de senha -->
+                    <Entry x:Name="PasswordConfirm"
+                           Placeholder="Confirmar senha..."
+                           PlaceholderColor="{DynamicResource PlaceholderColor}"
+                           TextColor="{DynamicResource PrimaryTextColor}"
+                           BackgroundColor="{DynamicResource InputBackgroundColor}"
+                           FontSize="16"
+                           IsPassword="True"
+                           HeightRequest="45"
+                           HorizontalOptions="FillAndExpand" />
+
+                    <!-- Checkbox para termos -->
+                    <HorizontalStackLayout>
+                        <CheckBox x:Name="TermsCheckBox"
+                                  Color="{DynamicResource AccentColor}" />
+                        <Label Text="Concordo com os Termos de Serviço &lt;br/> com a Política de Privacidade da &lt;br/> Brothers Tech"
+                               TextType="Html"
+                                FontSize="10"
+                                TextColor="{DynamicResource SecondaryTextColor}"
+                                LineBreakMode="WordWrap" />
+                    </HorizontalStackLayout>
+
+                    <Button Text="CADASTRAR" 
+                            x:Name="cadastrar"
+                            BackgroundColor="Red"
+                            TextColor="White"
+                            FontSize="16"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            Clicked="cadastrar_Clicked"
+                            />
+
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
+                            
+                            
+                        

@@ -78,10 +78,12 @@
                     <!-- Checkbox para termos -->
                     <HorizontalStackLayout>
                         <CheckBox x:Name="TermsCheckBox"
-                                  Color="{DynamicResource AccentColor}" />
-                        <Label Text="Concordo com os Termos de Serviço e \ncom a Política de Privacidade da Brothers Tech"
-                               FontSize="5"
-                               TextColor="{DynamicResource SecondaryTextColor}" />
+                            Color="{DynamicResource AccentColor}" />
+                        <Label Text="Concordo com os Termos de Serviço &lt;br/> com a Política de Privacidade da &lt;br/> Brothers Tech"
+                            TextType="Html"
+                            FontSize="10"
+                            TextColor="{DynamicResource SecondaryTextColor}"
+                            LineBreakMode="WordWrap" />     
                     </HorizontalStackLayout>
 
                     <Button Text="Entrar"
@@ -94,10 +96,10 @@
                             />
                     <HorizontalStackLayout HorizontalOptions="Center">
                         <Label Text="Ainda não tem uma conta ?"
-                            FontSize="8"
+                            FontSize="10"
                             TextColor="{DynamicResource SecondaryTextColor}" />
 
-                        <Label FontSize="8">
+                        <Label FontSize="10">
                             <Label.TextColor>
                                 <DynamicResource Key="AccentColor" />
                             </Label.TextColor>

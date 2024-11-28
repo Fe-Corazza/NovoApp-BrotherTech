@@ -48,7 +48,7 @@ namespace NovoApp
 
         private async void OnCadastrarClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PaginaCadastro());
+            await Navigation.PushAsync(new Bitcoin());
 
 
         }
