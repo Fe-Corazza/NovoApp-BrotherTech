@@ -7,9 +7,11 @@
     Shell.FlyoutBehavior="Disabled"
     Title="NovoApp">
 
+    <ShellContent Title="Home"
+                  ContentTemplate="{DataTemplate local:MainPage}"
+                  Route="MainPage" />
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+                  Title="Bitcoin"
+                  ContentTemplate="{DataTemplate local:Bitcoin}"
+                  Route="Bitcoin" />
 </Shell>
