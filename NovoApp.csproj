@@ -65,7 +65,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\intro.png" />
 	  <None Remove="Resources\Images\Logo.png" />
+	  <None Remove="Resources\Images\person.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -85,6 +87,12 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Bitcoin.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Conheca.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Home.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\NovaPagina.xaml">

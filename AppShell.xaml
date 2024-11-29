@@ -14,4 +14,9 @@
                   Title="Bitcoin"
                   ContentTemplate="{DataTemplate local:Bitcoin}"
                   Route="Bitcoin" />
+    <ShellContent
+              Title="Conheca"
+              ContentTemplate="{DataTemplate local:Conheca}"
+              Route="Conheca" />
+
 </Shell>

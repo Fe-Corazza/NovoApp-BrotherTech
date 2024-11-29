@@ -107,7 +107,7 @@
                                 <FormattedString>
                                     <Span Text=" " />
                                     <Span Text="Cadastre-se"
-                  TextDecorations="Underline">
+                                           TextDecorations="Underline">
                                         <Span.GestureRecognizers>
                                             <!-- Adicione o evento de toque -->
                                             <TapGestureRecognizer Tapped="OnSignUpTapped"/>

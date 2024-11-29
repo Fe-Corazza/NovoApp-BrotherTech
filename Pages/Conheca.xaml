@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NovoApp.Conheca"
+             BackgroundColor="Red"
+             Title="Qual o propósito?">
+
+    <Grid Padding="20">
+        <!-- Conteúdo -->
+            <ScrollView>
+                <VerticalStackLayout Spacing="20" Padding="0,40,0,0">
+                    <!-- Título -->
+                    <Label Text="Qual o propósito?"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontFamily="Jersey25"
+                       HorizontalOptions="Center" />
+
+                    <!-- Corpo -->
+                    <Label Text="A BrotherTech decidiu então criar o BrotherCoins, um aplicativo que simplifica a compra e venda de moedas."
+                       FontSize="16"
+                       TextColor="White"
+                       FontFamily="MochiyPopOne"
+                       LineBreakMode="WordWrap" />
+
+                    <!-- Subtítulo -->
+                    <Label Text="Qual o diferencial do aplicativo?"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       FontFamily="Jersey25" />
+
+                    <!-- Corpo 2 -->
+                    <Label Text="O aplicativo irá possuir um sistema de notificações quando as moedas tiverem uma alteração em seu valor."
+                       FontSize="16"
+                       TextColor="White"
+                       FontFamily="MochiyPopOne"
+                       LineBreakMode="WordWrap" />
+                </VerticalStackLayout>
+            </ScrollView>
+    </Grid>
+</ContentPage>
