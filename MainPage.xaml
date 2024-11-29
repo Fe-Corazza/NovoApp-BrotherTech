@@ -110,7 +110,7 @@
                   TextDecorations="Underline">
                                         <Span.GestureRecognizers>
                                             <!-- Adicione o evento de toque -->
-                                            <TapGestureRecognizer Tapped="OnSignUpTapped" />
+                                            <TapGestureRecognizer Tapped="OnSignUpTapped"/>
                                         </Span.GestureRecognizers>
                                     </Span>
                                 </FormattedString>
