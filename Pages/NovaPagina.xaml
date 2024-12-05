@@ -1,78 +1,47 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NovoApp.Pages.NovaPagina"
-             Title="Lista de Acompanhamento">
+             Title="Preços de Criptomoedas">
 
     <ContentPage.Resources>
-        <!-- Definindo estilos para os labels -->
-        <Style x:Key="TitleLabelStyle" TargetType="Label">
-            <Setter Property="FontSize" Value="24" />
-            <Setter Property="FontAttributes" Value="Bold" />
-            <Setter Property="TextColor" Value="#2C3E50" />
-            <Setter Property="HorizontalTextAlignment" Value="Center" />
-            <Setter Property="Padding" Value="10, 20" />
-        </Style>
-
-        <Style x:Key="CryptoLabelStyle" TargetType="Label">
-            <Setter Property="FontSize" Value="18" />
-            <Setter Property="TextColor" Value="#34495E" />
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="Black" />
             <Setter Property="VerticalOptions" Value="Center" />
-        </Style>
-
-        <Style x:Key="PriceLabelStyle" TargetType="Label">
-            <Setter Property="FontSize" Value="18" />
-            <Setter Property="TextColor" Value="#27AE60" />
-            <Setter Property="VerticalOptions" Value="Center" />
-        </Style>
-
-        <!-- Definindo o estilo do item da lista -->
-        <Style x:Key="ListItemStyle" TargetType="Frame">
-            <Setter Property="Padding" Value="5" />
-            <Setter Property="Margin" Value="5" />
-            <Setter Property="CornerRadius" Value="25" />
-            <Setter Property="BackgroundColor" Value="#ECF0F1" />
-            <Setter Property="HasShadow" Value="True" />
         </Style>
     </ContentPage.Resources>
 
-    <Grid Padding="15">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+    <StackLayout Padding="10">
+        <!-- Título da Página -->
+        <Label Text="Lista de Criptomoedas"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center" 
+               Padding="0, 10, 0, 10" />
 
-        <!-- Título -->
-        <Label Text="Lista de Acompanhamento"
-               Style="{StaticResource TitleLabelStyle}"
-               Grid.Row="0" />
-
-        <!-- Lista de Moedas -->
-        <ListView Grid.Row="1" ItemsSource="{Binding Moedas}" SeparatorVisibility="Default">
+        <!-- Lista de Criptomoedas -->
+        <ListView ItemsSource="{Binding Moedas}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame Style="{StaticResource ListItemStyle}">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-
+                        <Frame BorderColor="Gray" HeightRequest="40" Padding="10" Margin="5" CornerRadius="50" HasShadow="True">
+                            <StackLayout Orientation="Horizontal" Spacing="50">
                                 <!-- Nome da Moeda -->
-                                <Label Text="{Binding Nome}" 
-                                       Style="{StaticResource CryptoLabelStyle}" 
-                                       Grid.Column="0" />
+                                <Label Text="{Binding Nome}" Style="{StaticResource LabelStyle}" HorizontalOptions="Start" />
 
                                 <!-- Preço da Moeda -->
-                                <Label Text="{Binding Preco, StringFormat='${0:F2}'}" 
-                                       Style="{StaticResource PriceLabelStyle}" 
-                                       Grid.Column="1" HorizontalTextAlignment="End"/>
-                            </Grid>
+                                <Label Text="{Binding Preco, StringFormat='USD {0:N2}'}" Style="{StaticResource LabelStyle}" HorizontalOptions="EndAndExpand" />
+                            </StackLayout>
                         </Frame>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </Grid>
-
+                    <Label Text="Acompanhamento de Moedas" 
+                           FontSize="20"
+                           FontFamily="OpenSans"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center" 
+                           Padding="0, 10, 0, 10"/>
+    </StackLayout>
 </ContentPage>
