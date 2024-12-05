@@ -27,7 +27,7 @@
                         <Frame BorderColor="Gray" HeightRequest="40" Padding="10" Margin="5" CornerRadius="50" HasShadow="True">
                             <StackLayout Orientation="Horizontal" Spacing="50">
                                 <!-- Nome da Moeda -->
-                                <Label Text="{Binding Nome}" Style="{StaticResource LabelStyle}" HorizontalOptions="Start" />
+                                <Label TextColor="Red" Text="{Binding Nome}" Style="{StaticResource LabelStyle}" HorizontalOptions="Start" />
 
                                 <!-- Preço da Moeda -->
                                 <Label Text="{Binding Preco, StringFormat='USD {0:N2}'}" Style="{StaticResource LabelStyle}" HorizontalOptions="EndAndExpand" />
