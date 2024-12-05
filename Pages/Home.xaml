@@ -3,11 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NovoApp.Pages.Home"
              BackgroundColor="Black"
-             Title="Inicio">
+             Title="Início">
 
-    <Grid>
+    <Grid RowSpacing="0">
         <!-- Cabeçalho Vermelho -->
-        <Grid BackgroundColor="Red" Padding="10" HeightRequest="60">
+        <Grid BackgroundColor="Red" Padding="10" HeightRequest="60" Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
@@ -16,12 +16,12 @@
 
             <!-- Logo -->
             <Image Source="logo.png"
-                HeightRequest="40"
+                   HeightRequest="40"
                    VerticalOptions="Center"
                    Grid.Column="0" />
 
-                <!-- Título -->
-                <Label Text="Inicio"
+            <!-- Título -->
+            <Label Text="Início"
                    FontSize="18"
                    FontAttributes="Bold"
                    TextColor="White"
@@ -29,9 +29,9 @@
                    HorizontalOptions="Center"
                    Grid.Column="1" />
 
-                <!-- Ícone do Usuário -->
-                <ImageButton Source="person.png" 
-                    BackgroundColor="Transparent"
+            <!-- Ícone do Usuário -->
+            <ImageButton Source="person.png" 
+                         BackgroundColor="Transparent"
                          WidthRequest="30"
                          HeightRequest="30"
                          VerticalOptions="Center"
@@ -39,34 +39,33 @@
         </Grid>
 
         <!-- Conteúdo -->
-        <ScrollView>
-            <VerticalStackLayout Padding="20" Spacing="20"> 
+        <ScrollView Grid.Row="1">
+            <VerticalStackLayout Padding="20" Spacing="20">
                 <!-- Título -->
-
                 <Label Text="Conheça-nos."
                        FontSize="24"
                        FontAttributes="Bold"
                        TextColor="White"
-                       HorizontalOptions="Center" >
+                       HorizontalOptions="Center">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                     </Label.GestureRecognizers>
-                </Label> 
+                </Label>
 
-                    <!-- Imagem -->
+                <!-- Imagem -->
                 <Image Source="intro.png"
-                    Aspect="AspectFill"
+                       Aspect="AspectFill"
                        HeightRequest="200"
                        HorizontalOptions="Center" />
 
-                    <!-- Descrição -->
-                    <Label Text="O futuro dos investimentos em criptomoedas."
+                <!-- Descrição -->
+                <Label Text="O futuro dos investimentos em criptomoedas."
                        FontSize="18"
                        TextColor="White"
                        HorizontalOptions="Center" />
 
-                    <!-- Corpo -->
-                    <Label Text="Criado por 4 jovens, a BrotherTech tem o propósito de adentrar ao mundo do BitCoin com soluções inovadoras e confiáveis para investir, negociar e gerenciar suas criptomoedas."
+                <!-- Corpo -->
+                <Label Text="Criado por 4 jovens, a BrotherTech tem o propósito de adentrar ao mundo do Bitcoin com soluções inovadoras e confiáveis para investir, negociar e gerenciar suas criptomoedas."
                        FontSize="16"
                        TextColor="White"
                        LineBreakMode="WordWrap"
