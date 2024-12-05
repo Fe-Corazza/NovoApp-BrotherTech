@@ -7,6 +7,7 @@
     Shell.FlyoutBehavior="Disabled"
     Title="NovoApp">
 
+    <!--
     <ShellContent Title="Login"
                   ContentTemplate="{DataTemplate local:MainPage}"
                   Route="MainPage" />
@@ -14,4 +15,5 @@
                   Title="Home"
                   ContentTemplate="{DataTemplate local:Home}"
                   Route="Home" />
+    -->
 </Shell>
