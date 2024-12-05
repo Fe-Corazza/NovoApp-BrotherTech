@@ -31,7 +31,7 @@ namespace NovoApp
             {
                 await DisplayAlert("Sucesso", "Login realizado com sucesso!", "OK");
                 // Navegação ou próxima etapa do aplicativo
-                // await Navigation.PushAsync(new NextPage());
+               // await Navigation.PushAsync(new Conheca());
             }
             else
             {
@@ -48,7 +48,7 @@ namespace NovoApp
 
         private async void OnCadastrarClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Bitcoin());
+            await Navigation.PushAsync(new NovaPagina());
 
 
         }
