@@ -12,7 +12,7 @@
             
             <!-- Tema Light -->
             <Style x:Key="LightTheme" TargetType="ContentPage">
-                <Setter Property="BackgroundColor" Value="#F2F9FF" />
+                <Setter Property="BackgroundColor" Value="#121212" />
               <!-- <Setter Property="TextColor" Value="Black" /> -->
             </Style>
             

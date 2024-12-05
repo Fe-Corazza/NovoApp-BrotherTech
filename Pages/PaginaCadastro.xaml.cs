@@ -13,4 +13,9 @@ public partial class PaginaCadastro : ContentPage
                 ? (Style)Application.Current.Resources["DarkTheme"]
                 : (Style)Application.Current.Resources["LightTheme"];
     }
+
+    private void cadastrar_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
