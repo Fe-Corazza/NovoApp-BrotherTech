@@ -11,4 +11,9 @@ public partial class Home : ContentPage
     {
         await Navigation.PushAsync(new Conheca());
     }
+
+    private async void ImageButton_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new NovaPagina());
+    }
 }

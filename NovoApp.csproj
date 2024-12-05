@@ -65,7 +65,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\bitcoin.png" />
+	  <None Remove="Resources\Images\intro.png" />
 	  <None Remove="Resources\Images\Logo.png" />
+	  <None Remove="Resources\Images\seta.png" />
 	</ItemGroup>
 
 	<ItemGroup>

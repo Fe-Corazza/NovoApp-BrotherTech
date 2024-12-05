@@ -2,40 +2,50 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NovoApp.Pages.Conheca"
-             Title="Conheca">
-    <Grid Padding="20">
-        <!-- Conteúdo -->
-        <ScrollView>
-            <VerticalStackLayout Spacing="20" Padding="0,40,0,0">
-                <!-- Título -->
-                <Label Text="Qual o propósito?"
-                   FontSize="24"
-                   FontAttributes="Bold"
-                   TextColor="White"
-                   FontFamily="Jersey25"
-                   HorizontalOptions="Center" />
+             Title="Conheca"
+             NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout >
 
-                <!-- Corpo -->
-                <Label Text="A BrotherTech decidiu então criar o BrotherCoins, um aplicativo que simplifica a compra e venda de moedas."
-                   FontSize="16"
-                   TextColor="White"
-                   FontFamily="MochiyPopOne"
-                   LineBreakMode="WordWrap" />
+        <Grid BackgroundColor="Red"
+      Padding="10"
+      HeightRequest="60"
+      Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
 
-                <!-- Subtítulo -->
+            <ImageButton Source="seta.png" 
+         HeightRequest="40"
+         VerticalOptions="Center"
+         Grid.Column="0" 
+         Clicked="ImageSeta_Clicked"/>
+
+        </Grid>
+
+        <ScrollView Grid.Row="1"
+            VerticalScrollBarVisibility="Always">
+            <VerticalStackLayout Padding="20" Spacing="20">
+
+
+                <Label Text="A BrotherTech , decidiu então criar o BrotherCoins, um aplicativo que simplifica a compra e venda de moedas . "
+                        FontSize="16"
+                        TextColor="White"
+                        LineBreakMode="WordWrap"
+                        HorizontalOptions="Center" />
                 <Label Text="Qual o diferencial do aplicativo?"
-                   FontSize="18"
-                   FontAttributes="Bold"
-                   TextColor="White"
-                   FontFamily="Jersey25" />
+           FontSize="18"
+           TextColor="White"
+           HorizontalOptions="Center" />
 
-                <!-- Corpo 2 -->
-                <Label Text="O aplicativo irá possuir um sistema de notificações quando as moedas tiverem uma alteração em seu valor."
-                   FontSize="16"
-                   TextColor="White"
-                   FontFamily="MochiyPopOne"
-                   LineBreakMode="WordWrap" />
+                <Label Text="O aplicativo ira possuir um sistema de notificações quando as moedas tiverem uma altereção em seu valor."
+           FontSize="16"
+           TextColor="White"
+           LineBreakMode="WordWrap"
+           HorizontalOptions="Center" />
             </VerticalStackLayout>
         </ScrollView>
-    </Grid>
+    </VerticalStackLayout>
+
 </ContentPage>

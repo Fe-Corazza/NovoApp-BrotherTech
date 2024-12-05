@@ -31,7 +31,7 @@ namespace NovoApp
             {
                 await DisplayAlert("Sucesso", "Login realizado com sucesso!", "OK");
                 // Navegação ou próxima etapa do aplicativo
-                 await Navigation.PushAsync(new NovaPagina());
+                 await Navigation.PushAsync(new Home());
             }
             else
             {

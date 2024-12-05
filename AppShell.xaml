@@ -3,14 +3,15 @@
     x:Class="NovoApp.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace.NovoApp.Pages"
+    xmlns:local="clr-namespace.NovoApp"
     Shell.FlyoutBehavior="Disabled"
     Title="NovoApp">
-
     <!--
+
     <ShellContent Title="Login"
                   ContentTemplate="{DataTemplate local:MainPage}"
                   Route="MainPage" />
+ 
     <ShellContent
                   Title="Home"
                   ContentTemplate="{DataTemplate local:Home}"

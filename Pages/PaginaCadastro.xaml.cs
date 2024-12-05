@@ -14,8 +14,8 @@ public partial class PaginaCadastro : ContentPage
                 : (Style)Application.Current.Resources["LightTheme"];
     }
 
-    private void cadastrar_Clicked(object sender, EventArgs e)
+    private async void cadastrar_Clicked(object sender, EventArgs e)
     {
-
+        await Navigation.PushAsync(new Home());
     }
 }

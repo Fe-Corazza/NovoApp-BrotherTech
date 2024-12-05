@@ -6,4 +6,11 @@ public partial class Conheca : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void ImageSeta_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Home());
+    }
+
+    
 }

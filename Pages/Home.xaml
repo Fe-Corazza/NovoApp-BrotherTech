@@ -3,74 +3,73 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NovoApp.Pages.Home"
              BackgroundColor="Black"
-             Title="Início">
+             Title="Início"
+             NavigationPage.HasNavigationBar="False">
 
-    <Grid RowSpacing="0">
-        <!-- Cabeçalho Vermelho -->
-        <Grid BackgroundColor="Red" Padding="10" HeightRequest="60" Grid.Row="0">
+    <VerticalStackLayout >
+
+        <Grid BackgroundColor="Red"
+          Padding="10"
+          HeightRequest="60"
+          Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
-            <!-- Logo -->
             <Image Source="logo.png"
-                   HeightRequest="40"
-                   VerticalOptions="Center"
-                   Grid.Column="0" />
+             HeightRequest="40"
+             VerticalOptions="Center"
+             Grid.Column="0" />
 
-            <!-- Título -->
             <Label Text="Início"
-                   FontSize="18"
-                   FontAttributes="Bold"
-                   TextColor="White"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Grid.Column="1" />
+             FontSize="18"
+             FontAttributes="Bold"
+             TextColor="White"
+             VerticalOptions="Center"
+             HorizontalOptions="Center"
+             Grid.Column="1" />
 
-            <!-- Ícone do Usuário -->
-            <ImageButton Source="person.png" 
-                         BackgroundColor="Transparent"
-                         WidthRequest="30"
-                         HeightRequest="30"
-                         VerticalOptions="Center"
-                         Grid.Column="2" />
+            <ImageButton Source="bitcoin.png" 
+                   BackgroundColor="Transparent"
+                   WidthRequest="30"
+                   HeightRequest="30"
+                   VerticalOptions="Center"
+                   Grid.Column="2" 
+                   Clicked="ImageButton_Clicked"/>
         </Grid>
 
-        <!-- Conteúdo -->
-        <ScrollView Grid.Row="1">
+        <ScrollView Grid.Row="1"
+                VerticalScrollBarVisibility="Always">
             <VerticalStackLayout Padding="20" Spacing="20">
-                <!-- Título -->
+
                 <Label Text="Conheça-nos."
-                       FontSize="24"
-                       FontAttributes="Bold"
-                       TextColor="White"
-                       HorizontalOptions="Center">
+               FontSize="24"
+               FontAttributes="Bold"
+               TextColor="White"
+               HorizontalOptions="Center">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                     </Label.GestureRecognizers>
                 </Label>
 
-                <!-- Imagem -->
                 <Image Source="intro.png"
-                       Aspect="AspectFill"
-                       HeightRequest="200"
-                       HorizontalOptions="Center" />
+               Aspect="AspectFill"
+               HeightRequest="200"
+               HorizontalOptions="Center" />
 
-                <!-- Descrição -->
                 <Label Text="O futuro dos investimentos em criptomoedas."
-                       FontSize="18"
-                       TextColor="White"
-                       HorizontalOptions="Center" />
+               FontSize="18"
+               TextColor="White"
+               HorizontalOptions="Center" />
 
-                <!-- Corpo -->
                 <Label Text="Criado por 4 jovens, a BrotherTech tem o propósito de adentrar ao mundo do Bitcoin com soluções inovadoras e confiáveis para investir, negociar e gerenciar suas criptomoedas."
-                       FontSize="16"
-                       TextColor="White"
-                       LineBreakMode="WordWrap"
-                       HorizontalOptions="Center" />
+               FontSize="16"
+               TextColor="White"
+               LineBreakMode="WordWrap"
+               HorizontalOptions="Center" />
             </VerticalStackLayout>
         </ScrollView>
-    </Grid>
+    </VerticalStackLayout>
 </ContentPage>
